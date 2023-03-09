@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<h1>Cinema</h1>
+				<h1 className='text-3xl font-bold underline'>Cinema</h1>
 			</Head>
 			<Layout>
 				<main className={styles.main}>adsasd</main>
