@@ -109,3 +109,11 @@ a {
 		color-scheme: dark;
 	}
 }
+
+.my-gap {
+	column-gap: 2%;
+}
+
+.my-flex-basis {
+	flex-basis: 18.4%;
+}
