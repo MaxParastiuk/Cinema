@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const filmsSlice = createSlice({
 	name: "films",
 	initialState: {
-		listFilms: [],
+		currentPage: 1,
 	},
 	reducers: {
-		addFilms: (state, { payload }) => {
-			state.listFilms = payload;
+		setCurrentPage: (state, { payload }) => {
+			state.currentPage = payload;
 		},
 	},
 });
 
-export const { addFilms } = filmsSlice.actions;
+export const { setCurrentPage } = filmsSlice.actions;
 
 export default filmsSlice.reducer;
