@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import logo from "../../public/cinema-logo.png";
+import SearchForm from "./searchForm";
+import Image from "next/image";
 
 const Header = () => (
 	<>
@@ -14,40 +15,39 @@ const Header = () => (
 	*/}
 		<div className='min-h-full'>
 			<Disclosure as='nav' className='bg-gray-800'>
-				<>
-					<div className='mx-24 max-w-7xl px-4 sm:px-6 lg:px-8'>
-						<div className='flex h-24 items-center justify-between'>
-							<div className='flex items-center'>
-								<div className='flex-shrink-0'>
-									<img className='h-16 w-16' src={logo.src} alt='cinema-logo' />
-								</div>
-								<div className='hidden md:block'>
-									<div className='ml-10 flex items-baseline space-x-4'>
-										<a
-											className='text-white'
-											href='/'
-											// className={classNames(
-											// 	item.current
-											// 		? "bg-gray-900 text-white"
-											// 		: "text-gray-300 hover:bg-gray-700 hover:text-white",
-											// 	"rounded-md px-3 py-2 text-sm font-medium"
-											// )}
-											// aria-current={item.current ? "page" : undefined}
-										>
-											Cinema
-										</a>
-									</div>
+				<div className='mx-24 max-w-full px-4 sm:px-6 lg:px-8'>
+					<div className='flex h-24 items-center justify-between'>
+						<div className='flex items-center'>
+							<div className='flex-shrink-0'>
+								<img className='h-16 w-16' src={logo.src} alt='cinema-logo' />
+							</div>
+							<div className='hidden md:block'>
+								<div className='ml-10 flex items-baseline space-x-4'>
+									<a
+										className='text-white'
+										href='/'
+										// className={classNames(
+										// 	item.current
+										// 		? "bg-gray-900 text-white"
+										// 		: "text-gray-300 hover:bg-gray-700 hover:text-white",
+										// 	"rounded-md px-3 py-2 text-sm font-medium"
+										// )}
+										// aria-current={item.current ? "page" : undefined}
+									>
+										Cinema
+									</a>
 								</div>
 							</div>
 						</div>
+						<SearchForm></SearchForm>
 					</div>
+				</div>
 
-					<Disclosure.Panel className='md:hidden'>
-						<div className='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
-							<Disclosure.Button>Home</Disclosure.Button>
-						</div>
-					</Disclosure.Panel>
-				</>
+				<Disclosure.Panel className='md:hidden'>
+					<div className='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
+						<Disclosure.Button>Home</Disclosure.Button>
+					</div>
+				</Disclosure.Panel>
 			</Disclosure>
 		</div>
 	</>
