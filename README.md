@@ -5,7 +5,7 @@
 ### `To run this project locally, please follow these instructions:`
 
 
-1. git clone https://github.com/MaxParastiuk/Scandiweb-Test-Task.git
+1. git clone https://github.com/MaxParastiuk/Cinema.git
 
 3. Change directory into cloned folder cd cinema
 
