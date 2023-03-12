@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IFilm } from "@/interfaces/IFilm";
 
 const favoriteSlice = createSlice({
 	name: "favorite",
@@ -7,7 +8,12 @@ const favoriteSlice = createSlice({
 	},
 	reducers: {
 		addFavorite: (state, { payload }) => {
-			state.listFavorite = payload;
+			const isInFavorite = state.listFavorite.find(
+				(el) => el.imdbID === payload.imdbID
+			);
+			if (!isInFavorite) {
+				state.listFavorite.push(payload);
+			}
 		},
 	},
 });

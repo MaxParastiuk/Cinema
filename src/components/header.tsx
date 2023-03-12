@@ -36,7 +36,7 @@ const Header = () => (
 									>
 										Home
 									</a>
-									<a className='text-white' href='/'>
+									<a className='text-white' href='/favorite'>
 										Favorite
 									</a>
 								</div>

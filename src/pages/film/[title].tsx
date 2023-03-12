@@ -1,6 +1,9 @@
 import { GET_BY_ID_FILM } from "@/constants";
 import { IFilm } from "@/interfaces/IFilm";
 import { GetServerSideProps } from "next/types";
+import FilmItem from "@/components/FilmItem";
+import { useDispatch } from "react-redux";
+import { addFavorite } from "@/redux/feature/favoriteSlice";
 
 interface FilmProps {
 	data: IFilm;
@@ -9,6 +12,8 @@ interface FilmProps {
 const Film = ({ data }: FilmProps) => {
 	const { Title, Poster, Year, Runtime, Genre, Plot, imdbRating, Actors } =
 		data;
+
+	const dispatch = useDispatch();
 	return (
 		<div className=' xl:h-screen min-[320px]:flex-col max-[640px]:mx-6 min-[320px]:h-full mx-24 gap-x-14  xl:flex-row px-4 sm:px-6 lg:px-8  flex  m-16  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
 			<img
@@ -45,7 +50,9 @@ const Film = ({ data }: FilmProps) => {
 					<span className='max-[640px]:text-xl  text-3xl font-bold text-gray-900 dark:text-white'>
 						IMDB Rating: {imdbRating}
 					</span>
-					<button className=' min-[320px]:w-8/12 sm:text-2xl max-[640px]:text-xl xl:text-lg xl:w-4/12 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
+					<button
+						onClick={() => dispatch(addFavorite(data))}
+						className='focus:bg-green-500 min-[320px]:w-8/12 sm:text-2xl max-[640px]:text-xl xl:text-lg xl:w-4/12 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
 						Add to favorite
 					</button>
 				</div>
