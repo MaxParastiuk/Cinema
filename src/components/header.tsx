@@ -1,6 +1,6 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import logo from "../../public/cinema-logo.png";
-import SearchForm from "./searchForm";
+import SearchForm from "./SearchForm";
 import Image from "next/image";
 
 const Header = () => (
@@ -34,7 +34,10 @@ const Header = () => (
 										// )}
 										// aria-current={item.current ? "page" : undefined}
 									>
-										Cinema
+										Home
+									</a>
+									<a className='text-white' href='/'>
+										Favorite
 									</a>
 								</div>
 							</div>
