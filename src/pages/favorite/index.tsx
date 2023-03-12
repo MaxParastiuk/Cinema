@@ -1,6 +1,6 @@
 import { IState } from "@/interfaces/IState";
 import { useSelector } from "react-redux";
-import FilmItem from "@/components/FilmItem";
+import FilmItem from "@/components/filmItem";
 
 const Favorite = () => {
 	const favoriteFilms = useSelector(
