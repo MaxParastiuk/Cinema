@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next/types";
 import { IListFilm } from "@/interfaces/IListFilm";
 import { API_ALL_FILMS } from "../../constants/index";
-import Pagination from "@/components/Paginatation";
+import Pagination from "@/components/paginatation";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import Error404 from "../404";
