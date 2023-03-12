@@ -7,7 +7,7 @@
 
 1. git clone https://github.com/MaxParastiuk/Cinema.git
 
-3. Change directory into cloned folder cd cinema
+3. Change directory into cloned folder
 
 4. Install project dependencies npm install
 
