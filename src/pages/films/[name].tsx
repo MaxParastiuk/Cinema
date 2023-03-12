@@ -5,6 +5,7 @@ import Pagination from "@/components/Paginatation";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import Error404 from "../404";
+import Head from "next/head";
 
 interface FilmsProps {
 	data: {
@@ -21,10 +22,14 @@ export default function Films({ data, query }: FilmsProps) {
 
 	return (
 		<>
+			<Head>
+				<title>Films</title>
+				<meta name='title' content={`Films ${title}`} />
+			</Head>
 			{Search ? (
 				<>
 					{" "}
-					<ul className='flex justify-center max-[640px]:mx-6 min-[320px]:h-ful mt-20 my-gap  mx-24 max-w-full flex-wrap gap-y-14 gap-x-4'>
+					<ul className='flex justify-center  max-[640px]:mx-6 min-[320px]:h-ful mt-20 my-gap  mx-24 max-w-full flex-wrap gap-y-14 gap-x-4'>
 						{Search.map((el, index) => (
 							<li
 								className='flex flex-col 2xl:my-flex-basis xl:my-flex-basis md:my-flex-basis-xl'
