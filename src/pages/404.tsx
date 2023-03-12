@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Error404 = () => {
 	return (
 		<div className='bg-gray-100 h-screen justify-center'>
@@ -95,16 +97,16 @@ const Error404 = () => {
 						<span>4 0 4</span>
 					</span>
 					<span className='text-gray-500 text-xl'>
-						Sorry, We couldn't find what you are looking for!
+						Sorry, We couldnt find what you are looking for!
 					</span>
 				</div>
 			</center>
 			<center className='mt-6'>
-				<a
-					href='{{url()->previous()}}'
+				<Link
+					href='/'
 					className='text-gray-500 font-mono text-xl bg-gray-200 p-3 rounded-md hover:shadow-md'>
-					Go back{" "}
-				</a>
+					Go back
+				</Link>
 			</center>
 		</div>
 	);
