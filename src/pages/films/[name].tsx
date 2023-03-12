@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 import Error404 from "../404";
 import Head from "next/head";
+import Image from "next/image";
 
 interface FilmsProps {
 	data: {
@@ -35,7 +36,12 @@ export default function Films({ data, query }: FilmsProps) {
 								className='flex flex-col 2xl:my-flex-basis xl:my-flex-basis md:my-flex-basis-xl'
 								key={index}>
 								<Link href={`/film/${el.imdbID}`}>
-									<img src={el.Poster} alt='poster' />
+									<Image
+										width={300}
+										height={444}
+										src={el.Poster}
+										alt='poster'
+									/>
 									<div className=''>
 										<p>{el.Title}</p>
 										<p>{el.Type}</p>

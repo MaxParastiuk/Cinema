@@ -1,8 +1,8 @@
 import { IFilm } from "@/interfaces/IFilm";
 import Link from "next/link";
-import { IListFilm } from "@/interfaces/IListFilm";
 import { useDispatch } from "react-redux";
 import { deleteFavorite } from "@/redux/feature/favoriteSlice";
+import Image from "next/image";
 
 interface FilmProps {
 	data: IFilm[];
@@ -16,7 +16,9 @@ export default function FilmItem({ data }: FilmProps) {
 				{data.map((el, index) => (
 					<li className='flex flex-col my-flex-basis' key={index}>
 						<Link href={`/film/${el.imdbID}`}>
-							<img
+							<Image
+								width={300}
+								height={444}
 								className='min-[320px]:mx-auto'
 								src={el.Poster}
 								alt='poster'

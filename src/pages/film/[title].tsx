@@ -1,10 +1,10 @@
 import { GET_BY_ID_FILM } from "@/constants";
 import { IFilm } from "@/interfaces/IFilm";
 import { GetServerSideProps } from "next/types";
-import FilmItem from "@/components/FilmItem";
 import { useDispatch } from "react-redux";
 import { addFavorite } from "@/redux/feature/favoriteSlice";
 import Head from "next/head";
+import Image from "next/image";
 
 interface FilmProps {
 	data: IFilm;
@@ -22,7 +22,9 @@ const Film = ({ data }: FilmProps) => {
 				<meta name='title' content={`Film ${Title}`} />
 			</Head>
 			<div className=' xl:h-screen min-[320px]:flex-col max-[640px]:mx-6 min-[320px]:h-full mx-24 gap-x-14  xl:flex-row px-4 sm:px-6 lg:px-8  flex  m-16  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-				<img
+				<Image
+					width={800}
+					height={500}
 					className='md:w-8/12 max-w-md sm:self-center xl:self-auto h-4/6 p-8 rounded-t-lg'
 					src={Poster}
 					alt='product image'

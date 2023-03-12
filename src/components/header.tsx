@@ -2,7 +2,6 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import logo from "../../public/cinema-logo.png";
 import SearchForm from "./SearchForm";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import ActiveLink from "./ActiveLink";
 
 const Header = () => {
@@ -14,7 +13,13 @@ const Header = () => {
 						<div className='flex min-[320px]:gap-y-5 lg:flex-row min-[320px]:flex-col h-full items-center justify-between'>
 							<div className='flex items-center'>
 								<div className='flex-shrink-0'>
-									<img className='h-16 w-16' src={logo.src} alt='cinema-logo' />
+									<Image
+										width={800}
+										height={500}
+										className='h-16 w-16'
+										src={logo.src}
+										alt='cinema-logo'
+									/>
 								</div>
 								<div className='md:block'>
 									<div className='ml-10 flex items-baseline space-x-4'>
