@@ -1,8 +1,6 @@
-import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
-
-export default function SearchForm() {
+const SearchForm = () => {
 	const router = useRouter();
 	const [searchInput, setSearchInput] = useState("");
 
@@ -37,4 +35,5 @@ export default function SearchForm() {
 			</div>
 		</form>
 	);
-}
+};
+export default SearchForm;
