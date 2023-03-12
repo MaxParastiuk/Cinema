@@ -1,6 +1,6 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import logo from "../../public/cinema-logo.png";
-import SearchForm from "./SearchForm";
+import SearchForm from "./searchForm";
 import Image from "next/image";
 import ActiveLink from "./ActiveLink";
 
