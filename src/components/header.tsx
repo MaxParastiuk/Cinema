@@ -15,13 +15,13 @@ const Header = () => (
 	*/}
 		<div className='min-h-full'>
 			<Disclosure as='nav' className='bg-gray-800'>
-				<div className='mx-24 max-w-full px-4 sm:px-6 lg:px-8'>
-					<div className='flex h-24 items-center justify-between'>
+				<div className='mx-24 max-[640px]:mx-6 min-[320px]:py-6 max-w-full px-4 sm:px-6 lg:px-8'>
+					<div className='flex min-[320px]:gap-y-5 lg:flex-row min-[320px]:flex-col h-full items-center justify-between'>
 						<div className='flex items-center'>
 							<div className='flex-shrink-0'>
 								<img className='h-16 w-16' src={logo.src} alt='cinema-logo' />
 							</div>
-							<div className='hidden md:block'>
+							<div className='md:block'>
 								<div className='ml-10 flex items-baseline space-x-4'>
 									<a
 										className='text-white'

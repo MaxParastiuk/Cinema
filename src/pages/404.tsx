@@ -1,4 +1,4 @@
-const Error = () => {
+const Error404 = () => {
 	return (
 		<div className='bg-gray-100 h-screen justify-center'>
 			<center className='p-10 m-auto'>
@@ -110,4 +110,4 @@ const Error = () => {
 	);
 };
 
-export default Error;
+export default Error404;

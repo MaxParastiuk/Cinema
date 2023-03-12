@@ -12,12 +12,17 @@ const favoriteSlice = createSlice({
 				(el) => el.imdbID === payload.imdbID
 			);
 			if (!isInFavorite) {
-				state.listFavorite.push(payload);
+				state.listFavorite.push({ ...payload, isFavorite: true });
 			}
+		},
+		deleteFavorite: (state, { payload }) => {
+			state.listFavorite = state.listFavorite.filter(
+				(el) => el.imdbID !== payload.imdbID
+			);
 		},
 	},
 });
 
-export const { addFavorite } = favoriteSlice.actions;
+export const { addFavorite, deleteFavorite } = favoriteSlice.actions;
 
 export default favoriteSlice.reducer;

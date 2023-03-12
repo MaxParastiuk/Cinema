@@ -12,7 +12,9 @@ export default function SearchForm() {
 	};
 
 	return (
-		<form className='w-2/6' onSubmit={(e) => onSerch(e)}>
+		<form
+			className='min-[320px]:w-full lg:w-2/6 md:w-4/6 '
+			onSubmit={(e) => onSerch(e)}>
 			<label
 				htmlFor='default-search'
 				className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'>

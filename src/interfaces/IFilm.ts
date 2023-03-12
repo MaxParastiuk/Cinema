@@ -24,4 +24,5 @@ export interface IFilm {
 	production: string;
 	website: string;
 	response: string;
+	isFavorite?: boolean;
 }

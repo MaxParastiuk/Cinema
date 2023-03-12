@@ -114,6 +114,26 @@ a {
 	column-gap: 2%;
 }
 
-.my-flex-basis {
-	flex-basis: 18.4%;
+@media (min-width: 1536px) {
+	.my-flex-basis {
+		flex-basis: 18.4%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.my-flex-basis {
+		flex-basis: 23.5%;
+	}
+}
+
+@media (max-width: 768px) {
+	.my-flex-basis {
+		flex-basis: 32%;
+	}
+}
+
+@media (max-width: 640px) {
+	.my-flex-basis {
+		flex-basis: 100%;
+	}
 }

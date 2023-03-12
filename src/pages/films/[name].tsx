@@ -1,11 +1,10 @@
-import FilmItem from "@/components/FilmItem";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
+import { GetServerSideProps } from "next/types";
 import { IListFilm } from "@/interfaces/IListFilm";
 import { API_ALL_FILMS } from "../../constants/index";
 import Pagination from "@/components/Paginatation";
 import { useSelector } from "react-redux";
 import Link from "next/link";
-import ErrorSearch from "@/components/ErrorSearch";
+import Error404 from "../404";
 
 interface FilmsProps {
 	data: {
@@ -25,9 +24,11 @@ export default function Films({ data, query }: FilmsProps) {
 			{Search ? (
 				<>
 					{" "}
-					<ul className='flex mt-20 my-gap  mx-24 max-w-full px-4 sm:px-6 lg:px-8 flex-wrap gap-y-14 gap-x-4'>
+					<ul className='flex justify-center max-[640px]:mx-6 min-[320px]:h-ful mt-20 my-gap  mx-24 max-w-full flex-wrap gap-y-14 gap-x-4'>
 						{Search.map((el, index) => (
-							<li className='flex flex-col my-flex-basis ' key={index}>
+							<li
+								className='flex flex-col 2xl:my-flex-basis xl:my-flex-basis md:my-flex-basis-xl'
+								key={index}>
 								<Link href={`/film/${el.imdbID}`}>
 									<img src={el.Poster} alt='poster' />
 									<div className=''>
@@ -46,7 +47,7 @@ export default function Films({ data, query }: FilmsProps) {
 					/>
 				</>
 			) : (
-				<ErrorSearch></ErrorSearch>
+				<Error404 />
 			)}
 		</>
 	);
